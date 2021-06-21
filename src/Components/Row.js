@@ -35,7 +35,6 @@ function Row({ title, fetchUrl, isLargeRow }) {
       // npm package to find trailer
       movieTrailer(movie?.title || movie?.name || movie?.original_name || "")
         .then((url) => {
-          console.log(url);
           const urlParams = new URLSearchParams(new URL(url).search);
           setTrailerUrl(urlParams.get("v"));
         })
